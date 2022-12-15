@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "28854039543",
+    "project_id": "tricktionary",
+    "storage_bucket": "tricktionary.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:28854039543:android:f02df2720f9e58e2d774f2",
+        "android_client_info": {
+          "package_name": "com.example.tricktionary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "28854039543-s1vsdh6oigmk0suc4d37sqf5ugpn99i4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyh8apurykLuIb4SNxWXrAjsmOb8Y2C1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "28854039543-s1vsdh6oigmk0suc4d37sqf5ugpn99i4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
