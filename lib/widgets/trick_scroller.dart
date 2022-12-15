@@ -11,7 +11,7 @@ class TrickScroller extends ConsumerWidget {
     final height = MediaQuery.of(context).size.height;
     return Container(
       padding: const EdgeInsets.only(top: 10),
-      height: height / 3.2,
+      height: height / 2.85,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: tricks.length,
