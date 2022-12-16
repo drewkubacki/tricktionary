@@ -19,4 +19,16 @@ List<Trick> tricks = [
           "A skateboarding trick that combines a 360 pop shove-it with a kickflip.",
       image: "assets/img/treflip.gif",
       difficulty: 3),
+  Trick(
+      name: "Kickflip",
+      description:
+          "A skateboarding trick which combines an ollie and a flick of the front foot to flip the board 360 degrees sideways.",
+      image: "assets/img/kickflip.gif",
+      difficulty: 2),
+  Trick(
+      name: "Heelflip",
+      description:
+          "A skateboard trick which combines an ollie and a flick of the heel of the front foot to flip the board 360 degrees sideways.",
+      image: "assets/img/heelflip.gif",
+      difficulty: 3),
 ];

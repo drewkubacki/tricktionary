@@ -12,10 +12,8 @@ class TrickCard extends ConsumerWidget {
     final height = MediaQuery.of(context).size.height;
     return Container(
       width: width / 1.3,
-      margin:
-          const EdgeInsets.only(top: 0, bottom: 15.0, left: 15.0, right: 15.0),
-      padding: const EdgeInsets.only(
-          top: 15.0, bottom: 15.0, left: 15.0, right: 15.0),
+      margin: const EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
