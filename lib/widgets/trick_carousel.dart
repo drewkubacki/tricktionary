@@ -43,7 +43,9 @@ class _TrickCarouselState extends ConsumerState<TrickCarousel> {
               itemBuilder: (context, index, realIndex) =>
                   TrickCard(trick: tricks[index]),
             )),
-        ElevatedButton(onPressed: scrollToItem, child: Text("Trick")),
+        SizedBox(height: 10),
+        ElevatedButton(
+            onPressed: scrollToItem, child: Text("Select Your Trick")),
       ],
     );
   }

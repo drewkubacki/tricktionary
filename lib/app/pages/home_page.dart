@@ -1,9 +1,11 @@
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../widgets/trick_carousel.dart';
 
 class HomePage extends ConsumerWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+  final itemCarouselController = CarouselController();
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
