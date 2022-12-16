@@ -8,10 +8,12 @@ class TrickCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
     return Container(
-      width: 280,
-      height: 210,
-      margin: const EdgeInsets.all(15.0),
+      width: width / 1.3,
+      margin:
+          const EdgeInsets.only(top: 0, bottom: 15.0, left: 15.0, right: 15.0),
       padding: const EdgeInsets.only(
           top: 15.0, bottom: 15.0, left: 15.0, right: 15.0),
       decoration: BoxDecoration(
@@ -29,30 +31,31 @@ class TrickCard extends ConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            padding: EdgeInsets.only(left: 20, right: 20),
+            padding: EdgeInsets.only(left: 15, right: 15),
             child: Row(
               children: [
-                Text(trick.name),
+                Text(trick.name,
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.w300)),
                 Spacer(),
-                Text("Difficulty: " + trick.difficulty.toString()),
+                Text("Difficulty: " + trick.difficulty.toString(),
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.w300)),
               ],
             ),
           ),
-          SizedBox(height: 10),
           Image.asset(
             trick.image,
-            height: 125,
-            width: 250,
+            height: 175,
+            width: 225,
           ),
-          SizedBox(height: 10),
           Container(
-            padding: const EdgeInsets.only(left: 10, right: 10),
+            padding: const EdgeInsets.only(left: 5, right: 5),
             child: Text(
               trick.description,
               maxLines: 2,
               style: const TextStyle(
-                overflow: TextOverflow.ellipsis,
-              ),
+                  overflow: TextOverflow.ellipsis, fontWeight: FontWeight.w300),
             ),
           )
         ],
