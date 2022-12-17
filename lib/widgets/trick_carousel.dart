@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tricktionary/widgets/trick_card.dart';
 import 'dart:math';
 
+import '../app/providers.dart';
 import '../examples/tricks.dart';
 
 class TrickCarousel extends ConsumerStatefulWidget {
@@ -39,13 +40,12 @@ class _TrickCarouselState extends ConsumerState<TrickCarousel> {
                 enlargeStrategy: CenterPageEnlargeStrategy.height,
               ),
               itemCount: tricks.length,
-              carouselController: itemCarouselController,
+              carouselController:
+                  ref.read(scrollableProvider).itemCarouselController,
               itemBuilder: (context, index, realIndex) =>
                   TrickCard(trick: tricks[index]),
             )),
         SizedBox(height: 10),
-        ElevatedButton(
-            onPressed: scrollToItem, child: Text("Select Your Trick")),
       ],
     );
   }

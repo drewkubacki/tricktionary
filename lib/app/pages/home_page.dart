@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tricktionary/app/providers.dart';
 import '../../widgets/trick_carousel.dart';
 
 class HomePage extends ConsumerWidget {
@@ -9,6 +10,7 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final scrollItemModel = ref.watch(scrollableProvider);
     return Scaffold(
       appBar: AppBar(
         title: Text("Tricktionary",
@@ -22,6 +24,8 @@ class HomePage extends ConsumerWidget {
         child: Column(
           children: [
             TrickCarousel(),
+            ElevatedButton(
+                onPressed: scrollItemModel.scrollToItem, child: Text("Tricks")),
           ],
         ),
       ),
