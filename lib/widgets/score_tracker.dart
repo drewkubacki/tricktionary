@@ -18,7 +18,7 @@ class ScoreTracker extends ConsumerWidget {
       margin: const EdgeInsets.all(15),
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.background,
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
@@ -30,6 +30,7 @@ class ScoreTracker extends ConsumerWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          //Creates the container in which the Image is rounded within
           Container(
             height: 60,
             width: 60,
@@ -40,7 +41,8 @@ class ScoreTracker extends ConsumerWidget {
                   fit: BoxFit.fill,
                 )),
           ),
-          //SizedBox(height: 10),
+
+          //Section which holds the player name and scores
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -51,14 +53,18 @@ class ScoreTracker extends ConsumerWidget {
                   borderRadius: BorderRadius.circular(30.0),
                 ),
                 child: Column(
-                  children: const [
+                  children: [
                     Text("Player 1",
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w300,
+                          color: Theme.of(context).colorScheme.inverseSurface,
                         )),
-                    SizedBox(height: 10),
-                    Text("5"),
+                    const SizedBox(height: 10),
+                    Text("5",
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.inverseSurface,
+                        )),
                   ],
                 ),
               ),
@@ -70,19 +76,24 @@ class ScoreTracker extends ConsumerWidget {
                   borderRadius: BorderRadius.circular(30.0),
                 ),
                 child: Column(
-                  children: const [
+                  children: [
                     Text("Player 2",
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w300,
+                          color: Theme.of(context).colorScheme.inverseSurface,
                         )),
-                    SizedBox(height: 10),
-                    Text("2"),
+                    const SizedBox(height: 10),
+                    Text("2",
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.inverseSurface,
+                        )),
                   ],
                 ),
               ),
             ],
           ),
+
           ElevatedButton(
             onPressed: scrollItemModel.scrollToItem,
             style: ButtonStyle(
@@ -92,7 +103,10 @@ class ScoreTracker extends ConsumerWidget {
                 ),
               ),
             ),
-            child: const Text("Generate"),
+            child: Text("Generate",
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.background,
+                )),
           ),
         ],
       ),

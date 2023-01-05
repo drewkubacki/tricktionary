@@ -15,7 +15,7 @@ class TrickCard extends ConsumerWidget {
       margin: const EdgeInsets.all(15),
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).colorScheme.background,
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(.15),
@@ -34,11 +34,13 @@ class TrickCard extends ConsumerWidget {
               children: [
                 Text(trick.name,
                     style: TextStyle(
-                        color: Colors.black, fontWeight: FontWeight.w300)),
+                        color: Theme.of(context).colorScheme.inverseSurface,
+                        fontWeight: FontWeight.w300)),
                 Spacer(),
                 Text("Difficulty: " + trick.difficulty.toString(),
                     style: TextStyle(
-                        color: Colors.black, fontWeight: FontWeight.w300)),
+                        color: Theme.of(context).colorScheme.inverseSurface,
+                        fontWeight: FontWeight.w300)),
               ],
             ),
           ),
@@ -52,8 +54,10 @@ class TrickCard extends ConsumerWidget {
             child: Text(
               trick.description,
               maxLines: 2,
-              style: const TextStyle(
-                  overflow: TextOverflow.ellipsis, fontWeight: FontWeight.w300),
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.inverseSurface,
+                  overflow: TextOverflow.ellipsis,
+                  fontWeight: FontWeight.w300),
             ),
           )
         ],
