@@ -15,12 +15,15 @@ class HomePage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Tricktionary",
-            style: TextStyle(color: Colors.black, fontWeight: FontWeight.w300)),
+            style: TextStyle(
+                color: Theme.of(context).colorScheme.background,
+                fontWeight: FontWeight.w300)),
         centerTitle: true,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Theme.of(context).colorScheme.surfaceTint,
         elevation: 0,
         actions: [],
       ),
+      backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
       body: SafeArea(
         child: Column(
           children: [
