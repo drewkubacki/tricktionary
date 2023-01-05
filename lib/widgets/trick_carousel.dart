@@ -19,12 +19,6 @@ class _TrickCarouselState extends ConsumerState<TrickCarousel> {
   final itemCarouselController = CarouselController();
   final trickListLength = tricks.length;
 
-  Future scrollToItem() async {
-    var indexValue = Random().nextInt(trickListLength);
-    itemCarouselController.animateToPage(indexValue,
-        duration: Duration(seconds: 1));
-  }
-
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;

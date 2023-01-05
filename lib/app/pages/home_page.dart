@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tricktionary/app/providers.dart';
+import '../../widgets/score_tracker.dart';
 import '../../widgets/trick_carousel.dart';
 
 class HomePage extends ConsumerWidget {
@@ -24,8 +25,8 @@ class HomePage extends ConsumerWidget {
         child: Column(
           children: [
             TrickCarousel(),
-            ElevatedButton(
-                onPressed: scrollItemModel.scrollToItem, child: Text("Tricks")),
+            const SizedBox(height: 10),
+            ScoreTracker(),
           ],
         ),
       ),

@@ -14,3 +14,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Attributions
+
+Skateboard Icon with shoe: https://www.freepik.com/free-vector/fashion-logo-sticker-vector-business-branding-black-white-design_20346277.htm#query=skateboard&position=7&from_view=search&track=sph Image by rawpixel.com on Freepik
