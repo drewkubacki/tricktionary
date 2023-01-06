@@ -8,12 +8,10 @@ class ScoreTracker extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     final scrollItemModel = ref.watch(scrollableProvider);
 
     return Container(
-      //width: width / 1.3,
       height: height / 2.5,
       margin: const EdgeInsets.all(15),
       padding: const EdgeInsets.all(15),
@@ -47,7 +45,7 @@ class ScoreTracker extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.secondaryContainer,
                   borderRadius: BorderRadius.circular(30.0),
@@ -61,7 +59,7 @@ class ScoreTracker extends ConsumerWidget {
                           color: Theme.of(context).colorScheme.inverseSurface,
                         )),
                     const SizedBox(height: 10),
-                    Text("5",
+                    Text("Ska--",
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.inverseSurface,
                         )),
@@ -70,7 +68,7 @@ class ScoreTracker extends ConsumerWidget {
               ),
               const SizedBox(width: 25),
               Container(
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.secondaryContainer,
                   borderRadius: BorderRadius.circular(30.0),
@@ -84,7 +82,7 @@ class ScoreTracker extends ConsumerWidget {
                           color: Theme.of(context).colorScheme.inverseSurface,
                         )),
                     const SizedBox(height: 10),
-                    Text("2",
+                    Text("S----",
                         style: TextStyle(
                           color: Theme.of(context).colorScheme.inverseSurface,
                         )),

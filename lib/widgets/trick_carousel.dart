@@ -1,10 +1,7 @@
-import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tricktionary/widgets/trick_card.dart';
-import 'dart:math';
-
 import '../app/providers.dart';
 import '../examples/tricks.dart';
 
@@ -21,11 +18,10 @@ class _TrickCarouselState extends ConsumerState<TrickCarousel> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     return Column(
       children: [
-        Container(
+        SizedBox(
             height: height / 2.6,
             child: CarouselSlider.builder(
               options: CarouselOptions(
@@ -39,7 +35,7 @@ class _TrickCarouselState extends ConsumerState<TrickCarousel> {
               itemBuilder: (context, index, realIndex) =>
                   TrickCard(trick: tricks[index]),
             )),
-        SizedBox(height: 10),
+        const SizedBox(height: 10),
       ],
     );
   }

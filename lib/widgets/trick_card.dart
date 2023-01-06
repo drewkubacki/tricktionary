@@ -9,7 +9,6 @@ class TrickCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     return Container(
       width: width / 1.3,
       margin: const EdgeInsets.all(15),
@@ -29,15 +28,15 @@ class TrickCard extends ConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: Row(
               children: [
                 Text(trick.name,
                     style: TextStyle(
                         color: Theme.of(context).colorScheme.inverseSurface,
                         fontWeight: FontWeight.w300)),
-                Spacer(),
-                Text("Difficulty: " + trick.difficulty.toString(),
+                const Spacer(),
+                Text("Difficulty: ${trick.difficulty}",
                     style: TextStyle(
                         color: Theme.of(context).colorScheme.inverseSurface,
                         fontWeight: FontWeight.w300)),

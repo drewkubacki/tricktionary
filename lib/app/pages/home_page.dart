@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tricktionary/app/providers.dart';
 import '../../widgets/score_tracker.dart';
 import '../../widgets/trick_carousel.dart';
 
@@ -11,7 +10,6 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final scrollItemModel = ref.watch(scrollableProvider);
     return Scaffold(
       appBar: AppBar(
         title: Text("Tricktionary",
@@ -21,14 +19,14 @@ class HomePage extends ConsumerWidget {
         centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.surfaceTint,
         elevation: 0,
-        actions: [],
+        actions: const [],
       ),
       backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
       body: SafeArea(
         child: Column(
-          children: [
+          children: const [
             TrickCarousel(),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             ScoreTracker(),
           ],
         ),
