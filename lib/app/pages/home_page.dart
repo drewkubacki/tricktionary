@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../widgets/score-section/score_tracker.dart';
-import '../../widgets/trick_carousel.dart';
+import '../../widgets/trick-section/trick_carousel.dart';
 
 class HomePage extends ConsumerWidget {
   HomePage({super.key});
@@ -27,7 +27,7 @@ class HomePage extends ConsumerWidget {
           children: const [
             TrickCarousel(),
             SizedBox(height: 10),
-            ScoreTracker(),
+            ScoreTrackerSection(),
           ],
         ),
       ),

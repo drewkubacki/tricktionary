@@ -1,9 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tricktionary/widgets/trick_card.dart';
-import '../app/providers.dart';
-import '../examples/tricks.dart';
+import 'package:tricktionary/widgets/trick-section/trick_card.dart';
+import '../../app/providers.dart';
+import '../../examples/tricks.dart';
 
 class TrickCarousel extends ConsumerStatefulWidget {
   const TrickCarousel({super.key});

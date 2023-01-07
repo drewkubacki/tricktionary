@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tricktionary/widgets/score-section/random_selection_button.dart';
-import 'name_score_display.dart';
+import 'score_containers.dart';
 
-class ScoreTracker extends ConsumerWidget {
-  const ScoreTracker({super.key});
+class ScoreTrackerSection extends ConsumerWidget {
+  const ScoreTrackerSection({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -39,7 +39,7 @@ class ScoreTracker extends ConsumerWidget {
                 )),
           ),
           //Section which holds the player name and scores
-          const NameScoreDisplay(),
+          const ScoreContainers(),
           //Button to filter through the list of tricks -> Will need to store the index value and remove from list
           const RandomSelectionButton(),
         ],

@@ -8,7 +8,6 @@ class ScrollControlModel extends ChangeNotifier {
   final CarouselController itemCarouselController;
 
   ScrollControlModel() : itemCarouselController = CarouselController();
-
   final trickListLength = tricks.length;
 
   void scrollToItem() async {
