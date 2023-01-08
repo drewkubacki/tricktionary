@@ -16,4 +16,8 @@ class P2ScoreControlModel extends StateNotifier<String> {
       state = p2Score += "e";
     }
   }
+
+  clearScore(String p2Score) {
+    state = p2Score += "";
+  }
 }
