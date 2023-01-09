@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tricktionary/widgets/trick-section/trick_card_header.dart';
+import '../../examples/tricks.dart';
 import '../../models/trick.dart';
 
 class TrickCard extends ConsumerWidget {
@@ -9,9 +11,9 @@ class TrickCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final width = MediaQuery.of(context).size.width;
+
     return Container(
-      width: width / 1.2,
-      margin: const EdgeInsets.only(bottom: 30, top: 25, left: 15, right: 15),
+      margin: const EdgeInsets.only(bottom: 30, top: 25, left: 10, right: 10),
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surfaceVariant,
@@ -30,35 +32,27 @@ class TrickCard extends ConsumerWidget {
         ],
         borderRadius: BorderRadius.circular(15.0),
       ),
+      //Main Column that aligns Image, Trick Name, Difficulty and Description
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-            padding: const EdgeInsets.only(left: 15, right: 15),
-            child: Row(
-              children: [
-                Text(trick.name,
-                    style: TextStyle(
-                        color: Theme.of(context).colorScheme.inverseSurface,
-                        fontWeight: FontWeight.w300)),
-                const Spacer(),
-                Text("Difficulty: ${trick.difficulty}",
-                    style: TextStyle(
-                        color: Theme.of(context).colorScheme.inverseSurface,
-                        fontWeight: FontWeight.w300)),
-              ],
-            ),
-          ),
           Image.asset(
             trick.image,
-            height: 150,
-            width: 200,
+            width: width / 1.3,
+            fit: BoxFit.fill,
           ),
-          Container(
-            padding: const EdgeInsets.only(left: 5, right: 5),
+          TrickCardHeader(
+            trickName: trick.name,
+            trickDifficulty: trick.difficulty,
+          ),
+
+          //Icon(Icons.skateboarding),
+
+          //Trick Description
+          Align(
+            alignment: Alignment.topLeft,
             child: Text(
               trick.description,
-              maxLines: 2,
+              maxLines: 3,
               style: TextStyle(
                   color: Theme.of(context).colorScheme.inverseSurface,
                   overflow: TextOverflow.ellipsis,

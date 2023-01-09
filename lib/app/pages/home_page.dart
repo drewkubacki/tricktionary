@@ -26,9 +26,10 @@ class HomePage extends ConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: const [
+            SizedBox(height: 10),
             TrickCarousel(),
             ScoreTrackerSection(),
-            //SizedBox(height: 20),
+            SizedBox(height: 20),
           ],
         ),
       ),

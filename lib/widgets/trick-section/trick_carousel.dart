@@ -19,22 +19,23 @@ class _TrickCarouselState extends ConsumerState<TrickCarousel> {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
+
     return Column(
       children: [
         SizedBox(
-            height: height / 2.6,
             child: CarouselSlider.builder(
-              options: CarouselOptions(
-                height: 400,
-                enlargeCenterPage: true,
-                enlargeStrategy: CenterPageEnlargeStrategy.height,
-              ),
-              itemCount: tricks.length,
-              carouselController:
-                  ref.read(scrollableProvider).itemCarouselController,
-              itemBuilder: (context, index, realIndex) =>
-                  TrickCard(trick: tricks[index]),
-            )),
+          options: CarouselOptions(
+            //Sets the height of the Trick card!!!!
+            height: height / 2.2,
+            enlargeCenterPage: true,
+            enlargeStrategy: CenterPageEnlargeStrategy.zoom,
+          ),
+          itemCount: tricks.length,
+          carouselController:
+              ref.read(scrollableProvider).itemCarouselController,
+          itemBuilder: (context, index, realIndex) =>
+              TrickCard(trick: tricks[index]),
+        )),
       ],
     );
   }
