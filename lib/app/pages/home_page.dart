@@ -24,10 +24,11 @@ class HomePage extends ConsumerWidget {
       backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
       body: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: const [
             TrickCarousel(),
-            SizedBox(height: 10),
             ScoreTrackerSection(),
+            //SizedBox(height: 20),
           ],
         ),
       ),

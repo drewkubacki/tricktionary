@@ -35,6 +35,8 @@ class RandomSelectionButton extends ConsumerWidget {
               Text("Generate",
                   style: TextStyle(
                     color: Theme.of(context).colorScheme.inverseSurface,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
                   ))
             ],
           )),

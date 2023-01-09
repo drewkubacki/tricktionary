@@ -35,7 +35,6 @@ class _TrickCarouselState extends ConsumerState<TrickCarousel> {
               itemBuilder: (context, index, realIndex) =>
                   TrickCard(trick: tricks[index]),
             )),
-        const SizedBox(height: 10),
       ],
     );
   }

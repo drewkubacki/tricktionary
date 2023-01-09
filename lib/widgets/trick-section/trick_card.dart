@@ -10,8 +10,8 @@ class TrickCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final width = MediaQuery.of(context).size.width;
     return Container(
-      width: width / 1.3,
-      margin: const EdgeInsets.all(15),
+      width: width / 1.2,
+      margin: const EdgeInsets.only(bottom: 30, top: 25, left: 15, right: 15),
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surfaceVariant,
@@ -51,8 +51,8 @@ class TrickCard extends ConsumerWidget {
           ),
           Image.asset(
             trick.image,
-            height: 175,
-            width: 225,
+            height: 150,
+            width: 200,
           ),
           Container(
             padding: const EdgeInsets.only(left: 5, right: 5),
