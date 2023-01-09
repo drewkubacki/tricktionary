@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 class P2ScoreControlModel extends StateNotifier<String> {
   P2ScoreControlModel() : super('');
 
-  addLetter(String p2Score) {
+  addLetterP2(String p2Score) {
     if (p2Score == "") {
       state = p2Score += "S";
     } else if (p2Score == "S") {

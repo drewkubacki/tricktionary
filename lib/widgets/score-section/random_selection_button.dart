@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../../app/providers.dart';
 
 class RandomSelectionButton extends ConsumerWidget {
@@ -10,21 +9,35 @@ class RandomSelectionButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final scrollItemModel = ref.watch(scrollableProvider);
 
-    return ElevatedButton(
-      onPressed: scrollItemModel.scrollToItem,
-      style: ButtonStyle(
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(18.0),
-          ),
-        ),
-      ),
-      child: Text(
-        "Generate",
-        style: TextStyle(
-          color: Theme.of(context).colorScheme.background,
-        ),
-      ),
+    return GestureDetector(
+      onTap: scrollItemModel.scrollToItem,
+      child: Container(
+          height: 50,
+          decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.surfaceVariant,
+              borderRadius: BorderRadius.circular(30.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.shade600,
+                  offset: const Offset(5, 5),
+                  blurRadius: 15,
+                ),
+                // ignore: prefer_const_constructors
+                BoxShadow(
+                  color: Colors.white,
+                  offset: const Offset(-5, -5),
+                  blurRadius: 15,
+                ),
+              ]),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("Generate",
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.inverseSurface,
+                  ))
+            ],
+          )),
     );
   }
 }

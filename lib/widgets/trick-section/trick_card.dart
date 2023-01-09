@@ -14,12 +14,18 @@ class TrickCard extends ConsumerWidget {
       margin: const EdgeInsets.all(15),
       padding: const EdgeInsets.all(15),
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.background,
+        color: Theme.of(context).colorScheme.surfaceVariant,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(.15),
-            offset: const Offset(0, 15),
-            blurRadius: 25,
+            color: Colors.grey.shade600,
+            offset: const Offset(5, 5),
+            blurRadius: 15,
+          ),
+          // ignore: prefer_const_constructors
+          BoxShadow(
+            color: Colors.white,
+            offset: const Offset(-5, -5),
+            blurRadius: 15,
           ),
         ],
         borderRadius: BorderRadius.circular(15.0),
