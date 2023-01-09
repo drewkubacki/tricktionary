@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tricktionary/widgets/score-section/clear_game_button.dart';
 import 'package:tricktionary/widgets/score-section/random_selection_button.dart';
 import 'score_container_section.dart';
-import 'package:tricktionary/app/providers.dart';
 
 class ScoreTrackerSection extends ConsumerWidget {
   const ScoreTrackerSection({super.key});
@@ -19,11 +18,11 @@ class ScoreTrackerSection extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           //Section which holds the player name and scores
-          ScoreContainerSection(),
+          const ScoreContainerSection(),
           //Button to filter through the list of tricks -> Will need to store the index value and remove from list
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Expanded(child: RandomSelectionButton()),
               SizedBox(width: 10),
               ClearGameButton(),
