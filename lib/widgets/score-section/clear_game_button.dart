@@ -15,14 +15,9 @@ class ClearGameButton extends ConsumerWidget {
       child: Container(
         height: 50,
         width: 50,
-        child: Icon(Icons.refresh),
         decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: Theme.of(context).colorScheme.surfaceVariant,
-            // image: DecorationImage(
-            //   image: AssetImage('assets/img/skateboard-icon.jpg'),
-            //   fit: BoxFit.fill,
-            // ),
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.shade600,
@@ -36,6 +31,7 @@ class ClearGameButton extends ConsumerWidget {
                 blurRadius: 15,
               ),
             ]),
+        child: const Icon(Icons.refresh),
       ),
     );
   }

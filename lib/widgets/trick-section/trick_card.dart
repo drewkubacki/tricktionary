@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tricktionary/widgets/trick-section/trick_card_header.dart';
-import '../../examples/tricks.dart';
 import '../../models/trick.dart';
 
 class TrickCard extends ConsumerWidget {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../models/trick.dart';
 
 class TrickCardHeader extends ConsumerWidget {
   final String trickName;

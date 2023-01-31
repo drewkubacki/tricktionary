@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tricktionary/app/providers.dart';
 import 'package:tricktionary/widgets/score-section/score-containers/p1_score_container.dart';
 import 'package:tricktionary/widgets/score-section/score-containers/p2_score_container.dart';
 
@@ -12,7 +11,7 @@ class ScoreContainerSection extends ConsumerWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+          padding: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
           child: Row(children: [
             Text("Player 1",
                 style: TextStyle(
@@ -20,7 +19,7 @@ class ScoreContainerSection extends ConsumerWidget {
                   fontWeight: FontWeight.w600,
                   color: Theme.of(context).colorScheme.inverseSurface,
                 )),
-            Spacer(),
+            const Spacer(),
             Text("Player 2",
                 style: TextStyle(
                   fontSize: 18,

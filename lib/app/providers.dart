@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tricktionary/widgets/score-section/control-models/p1_score_control_model.dart';
-import '../scroll_control_model.dart';
-import '../widgets/score-section/control-models/p2_score_control_model.dart';
+import 'package:tricktionary/control-models/p1_score_control_model.dart';
+import '../control-models/scroll_control_model.dart';
+import '../control-models/p2_score_control_model.dart';
 
 final scrollableProvider = ChangeNotifierProvider<ScrollControlModel>(((ref) {
   return ScrollControlModel();

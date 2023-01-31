@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../widgets/score-section/score_tracker.dart';
+import '../../widgets/score-section/score_tracker_section.dart';
 import '../../widgets/trick-section/trick_carousel.dart';
 
 class HomePage extends ConsumerWidget {
