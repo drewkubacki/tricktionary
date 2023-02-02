@@ -4,20 +4,13 @@ class P1ScoreControlModel extends StateNotifier<String> {
   P1ScoreControlModel() : super('');
 
   addLetterP1(String p1Score) {
-    if (p1Score == "") {
-      state = p1Score += "S";
-    } else if (p1Score == "S") {
-      state = p1Score += "k";
-    } else if (p1Score == "Sk") {
-      state = p1Score += "a";
-    } else if (p1Score == "Ska") {
-      state = p1Score += "t";
-    } else if (p1Score == "Skat") {
-      state = p1Score += "e";
+    state = p1Score;
+    if (p1Score.length < 5) {
+      state += "Skate"[p1Score.length];
     }
   }
 
-  clearScore(String p1Score) {
-    state = p1Score += "";
+  clearScore(String emptyString) {
+    state = emptyString;
   }
 }

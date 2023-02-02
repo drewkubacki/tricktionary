@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tricktionary/widgets/score-section/clear_game_button.dart';
-import 'package:tricktionary/widgets/score-section/random_selection_button.dart';
+import 'package:tricktionary/widgets/buttons/clear_game_button.dart';
+import 'package:tricktionary/widgets/buttons/generate_selection_button.dart';
 import 'score_container_section.dart';
 
 class ScoreTrackerSection extends ConsumerWidget {
@@ -23,7 +23,7 @@ class ScoreTrackerSection extends ConsumerWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Expanded(child: RandomSelectionButton()),
+              Expanded(child: GenerateSelectionButton()),
               SizedBox(width: 10),
               ClearGameButton(),
             ],

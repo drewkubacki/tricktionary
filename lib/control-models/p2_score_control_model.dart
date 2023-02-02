@@ -4,20 +4,13 @@ class P2ScoreControlModel extends StateNotifier<String> {
   P2ScoreControlModel() : super('');
 
   addLetterP2(String p2Score) {
-    if (p2Score == "") {
-      state = p2Score += "S";
-    } else if (p2Score == "S") {
-      state = p2Score += "k";
-    } else if (p2Score == "Sk") {
-      state = p2Score += "a";
-    } else if (p2Score == "Ska") {
-      state = p2Score += "t";
-    } else if (p2Score == "Skat") {
-      state = p2Score += "e";
+    state = p2Score;
+    if (p2Score.length < 5) {
+      state += "Skate"[p2Score.length];
     }
   }
 
-  clearScore(String p2Score) {
-    state = p2Score += "";
+  clearScore(String emptyString) {
+    state = emptyString;
   }
 }

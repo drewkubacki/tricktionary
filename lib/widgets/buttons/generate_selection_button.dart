@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../app/providers.dart';
 
-class RandomSelectionButton extends ConsumerWidget {
-  const RandomSelectionButton({super.key});
+class GenerateSelectionButton extends ConsumerWidget {
+  const GenerateSelectionButton({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

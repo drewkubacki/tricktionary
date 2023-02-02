@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:tricktionary/widgets/score-section/score-containers/p1_score_container.dart';
-import 'package:tricktionary/widgets/score-section/score-containers/p2_score_container.dart';
+import 'package:tricktionary/widgets/score-section/p1_score_container.dart';
+import 'package:tricktionary/widgets/score-section/p2_score_container.dart';
 
 class ScoreContainerSection extends ConsumerWidget {
   const ScoreContainerSection({super.key});

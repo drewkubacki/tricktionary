@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../../app/providers.dart';
+import '../../app/providers.dart';
 
 class P2ScoreContainer extends ConsumerWidget {
   const P2ScoreContainer({super.key});
